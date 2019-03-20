@@ -90,7 +90,7 @@ namespace _26_Shape_Detection_using_Contours
                         // Check for Square
                         Rectangle rect = CvInvoke.BoundingRectangle(contours[i]);
                         double ar = (double) rect.Width / rect.Height;
-                        if (ar >= .95 || ar <= 1.05)
+                        if (ar >= .95 && ar <= 1.05)
                         {
                             CvInvoke.PutText(imgInput, "Square",
                             new Point(x, y),
